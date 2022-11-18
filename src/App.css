@@ -1,0 +1,38 @@
+body{
+    /* background-image: url('https://i.pinimg.com/564x/3f/c7/00/3fc700045fb919e853c419da2db352f8.jpg');
+    background-size: 33.33% auto; */
+    background-color: #03181b;
+    padding: 1rem;
+}
+
+.general-div{
+    position: relative;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.social-icons{
+    width: fit-content;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.fa-heart{
+    color: red;
+}

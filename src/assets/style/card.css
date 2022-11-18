@@ -1,0 +1,224 @@
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+    padding: 1rem;
+    list-style: none;
+
+}
+
+.card {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    z-index: 50;
+
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-shadow: 0 0 40px 0 purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition-duration: 1s;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    animation: textclip 2s linear infinite;
+
+}
+
+.card .front {
+    transform: perspective(500px) rotateY(0deg);
+    border-radius: 5px;
+    gap: .5rem;
+}
+
+.card .back {
+    transform: perspective(500px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.front h2,
+.back h2 {
+    color: #dcdde1;
+    font-size: 20px;
+}
+
+.back h3 {
+    color: #fff;
+    text-shadow: .5px .5px #2f3640;
+}
+
+.back h3 span {
+    color: #8c7ae6;
+}
+
+.back h2 {
+    width: 150px;
+    text-align: center;
+    margin-left: 9rem;
+    margin-top: 2.5rem;
+}
+
+.back h3:nth-child(2) {
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+}
+
+.back h3:nth-child(3) {
+    margin-left: 6rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.back h3:nth-child(3) span {
+    text-align: center;
+}
+
+.back h3:nth-child(4) {
+    margin-left: -7rem;
+    margin-top: 2rem;
+}
+
+.back h3:nth-child(5) {
+    margin-right: 8rem;
+    margin-top: 3rem;
+}
+
+.decoration-bottom {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.decoration-top {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.img-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.dead {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: dead 4s ease-in 0s infinite;
+    gap: 1rem;
+    color: #52c234;
+}
+
+.dead img {
+    width: 50%;
+    height: 50%;
+}
+
+.back:hover h2 {
+    animation: 1.5s ease 0s infinite beat;
+}
+
+.card:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+@keyframes dead {
+
+    0%,
+    30%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes beat {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    30%,
+    80% {
+        transform: scale(0.92, 0.95);
+    }
+}
+
+.animate-charcter {
+    width: 100%;
+    border-radius: .5rem;
+    text-align: center;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    animation: textclip 2s linear infinite;
+    text-fill-color: transparent;
+    color: #fff;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}

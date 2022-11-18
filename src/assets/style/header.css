@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Sancreek&display=swap');
+
+:root {
+    --font-title1: 'Sancreek', cursive;
+    --font-title2: 'Creepster', cursive;
+}
+
+.title-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 0 10px rgba(255,255,255);
+}
+
+.logo-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 350px 100px;
+    background-color: black;
+    backdrop-filter: blur(200px);
+    box-shadow: 0 0 30px 0 white;
+}
+
+@media screen and (min-width: 500px) {
+    .logo-container {
+        background-size: 600px 100px;
+    }
+}
+
+.gif-containers {
+    height: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gif-card {
+    height: 100%;
+    width: 100%;
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+}
+
+.first {
+    background-image: url('https://i.pinimg.com/originals/29/bd/26/29bd261d201e956588ee777d37d26800.gif');
+}
+
+.second {
+    background-image: url('https://media.tenor.com/R4_sUN8G5uYAAAAd/rick-and-morty.gif');
+}
+
+.third {
+    background-image: url('https://i.pinimg.com/originals/6e/39/6a/6e396ac75293f741be7b7855ba4968e5.gif')
+}
+
+.fourth {
+    background-image: url('https://media.tenor.com/1EH3zPpQ7zUAAAAC/rick-and-morty-breaking-bad.gif')
+}
+
+/* minecraft edition https://media.tenor.com/QKRTKnW_5ewAAAAd/rick-and-morty-minecraft.gif */
+
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+.nav-container {
+    height: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.nav-container span {
+    font-size: 70px;
+    text-shadow: 0 0px rgb(107, 4, 107), 0 0px rgb(36, 15, 226);
+    transform: translate(0, 100%) rotate(2deg);
+    animation: jump 3s ease-in-out infinite;
+    font-family: var(--font-title1);
+    color: rgb(109, 244, 28);
+    text-shadow: 0 5px rgb(107, 4, 107);
+}
+
+.nav-container span:nth-child(1) {
+    animation-delay: 120ms;
+}
+
+.nav-container span:nth-child(2) {
+    animation-delay: 240ms;
+}
+
+.nav-container span:nth-child(3) {
+    animation-delay: 360ms;
+}
+
+.nav-container span:nth-child(4) {
+    animation-delay: 480ms;
+}
+
+.nav-container span:nth-child(5) {
+    animation-delay: 600ms;
+}
+
+@keyframes jump {
+    33% {
+        text-shadow: 0 60px purple, 0 70px rgb(36, 15, 226);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(-5deg);
+        text-shadow: 0 0px #8fc0a9, 0 0px #84a9ac;
+    }
+
+    66.67% {
+        text-shadow: 0 -30px rgb(36, 15, 226), 0 -20px #8fc0a9;
+    }
+}
+
+@media screen and (max-height: 200px) {
+    .nav-container {
+        transform: scale(0.3, 0.3);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-container span {
+        font-size: 20px;
+    }
+}
